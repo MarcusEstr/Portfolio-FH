@@ -1,0 +1,177 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<link
+	rel="stylesheet"
+	href="prism-atom-dark.css"
+	type="text/css"
+	media="screen"
+	/>
+
+	<script type="text/javascript" src="prism.js"></script>
+	<script type="text/javascript" src="prism.ruby.js"></script>
+
+	<title>Marcus Estrada</title>
+	<meta name="description" content="Marcus Estrada is a developer specializing in full-stack development."
+
+	</head>
+
+	<body>
+		<div class="about-container">
+
+			<ul>
+			  <li><a href="#" class="nav-link">About</a></li>
+			  <li><a href="#code-samples" class="nav-link">Code Samples</a></li>
+			  <li><a href="#web-apps" class="nav-link">Web Apps</a></li>
+			  <li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a></li>
+			  <li><a href="#contact-me" class="nav-link">Contact Me</a></li>
+			</ul>
+
+			<div class="about">
+				<img src="Images/me.jpg" class="me" >
+				<h1>Marcus</h1>
+				<h2>PROGRAMMER ANALYST</h2>
+				<hr class="line"/>
+				<p class="bio">Marcus is a programmer analyst with a love for databases, data analysis, web development, automation, and video game development. When not at work, he's often working on personal projects.</p>
+			</div> <!--End of About div-->
+		</div> <!--End of about-container div-->
+
+		<h3 id="code-samples">Code Snippets</h3>
+		<hr class="blue">
+
+		<div class="box">
+			<h4>Temperature Conversion</h4>
+			  <p>
+			    This ruby program will prompt the user for a temperature
+			    in degrees Celsius and let the user know what the
+			    corresponding temperature is in Fahrenheit.
+			  </p>
+		</div>
+		<div class="box">
+<pre><code class="language-ruby">puts &quot;Degrees in celsius: &quot;
+celsius = gets.chomp.to_f
+
+#Method converting celsius input to fahrenheit.
+def celsius_to_fahrenheit(celsius)
+  fahrenheit = celsius * 1.8 + 32
+  return fahrenheit
+end
+
+#Output to console.
+puts &quot;#{celsius} degrees celsius is equal to #{celsius_to_fahrenheit(celsius)} fahrenheit.&quot;</code></pre>
+		</div>
+
+		<br class="clear"/>
+
+		<div class="box">
+<pre><code class="language-ruby">puts &quot;Enter a number: &quot;
+number = gets.to_i
+number_ordinal = number % 10 
+#lop off right most digit and store in a value
+
+if number % 100 &gt;= 11 &amp;&amp; number % 100 &lt;=13
+  puts &quot;That's the #{number}th item!&quot;
+elsif number_ordinal == 1
+  puts &quot;That's the #{number}st item!&quot;
+elsif number_ordinal == 2
+  puts &quot;That's the #{number}nd item!&quot;
+elsif number_ordinal == 3
+  puts &quot;That's the #{number}rd item!&quot;
+else
+  puts &quot;That's the #{number}th item!&quot;
+end</code></pre>
+		</div>
+
+		<div class="box">
+		  <h4>Ordinal Challenge</h4>
+			  <p>
+			    This ruby program will convert a plain number
+			    to the ordinal of the number. So for example,
+			    if the user enters 2, it will display 2nd, if
+			    the user enters 3, it will display 3rd, etc.
+			  </p>
+		</div>
+
+		<br class="clear" />
+		<div class="box">
+		  <h4>Foobar</h4>
+		  <p>
+		    This ruby program is an adaptation of a classic technical
+		    interview problem which displays sequences
+		    of the Foobar pattern.
+		  </p>
+		</div>
+
+		<div class="box">
+<pre><code class="language-ruby">puts &quot;How many items do you want to see?&quot; 
+itemNumber = gets.to_i #Integer conversion of user input.
+
+i = 1 
+#While loop from i = 1 to itemNumber. 
+while i &lt;= itemNumber  do
+  if i % 15 == 0 #If i divisible by 15...
+    puts &quot;Foobar&quot;
+  elsif i % 5 == 0 #Else, If i divisble by 5...
+    puts &quot;Bar&quot;
+  elsif i % 3 == 0 #Else, If i divisible by 3...
+    puts &quot;Foo&quot;
+  else #Else, just put i.
+    puts i
+  end
+  i += 1
+end</code></pre>
+		</div>
+
+		<br class="clear" />
+
+		<h3 id="web-apps">Web Apps</h3>
+		<hr class="blue" />
+
+		<div class="box">
+		    <h4>Replicate a Webpage</h4>
+		    <img src="Images/CopyWebpage.jpg" class="full-width" />
+		    <p>The goal was to completely replicate from scratch a single-page
+		    website using HTML, CSS, and Boostrap. Page includes Bootstrap navigation bar, custom fonts, images between paragraphs, quote content, and a footer bar.
+      		</p>
+	    </div>
+
+	    <div class="box">
+		    <h4>Subscription-Based Website</h4>
+		    <img src="Images/DevMatch.jpg" class="full-width" />
+		    <p>This website offers a free and paid subscription option.
+			All logged on users see a different home page, and subscribed users receive additional information when viewing other profiles. Pro account creation is tied to (Test) Stripe. Contact form sends email to admin. Deployed on Heroku.
+      		</p>
+	    </div>
+
+	    <br class="clear" />
+	    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+	    <hr class="blue" />
+	    <p class="skills-and-tools">Marcus has developed proficiency in the following programming languages and is comfortable with using the following tools.</p>
+
+	    <div class="icons">
+		    <img src="Images/github.png" class="icon" />
+		    <img src="Images/rubocop.png" class="icon" />
+		    <img src="Images/trello.png" class="icon" />
+		    <img src="Images/slack.png" class="icon" />
+		    <img src="Images/codeship.png" class="icon" />
+
+		    <br class="clear" />
+	    	<img src="Images/skills.png" class="icon" />
+    	</div>
+
+    	<div class="contact-me" id="contact-me">
+    		<h3 class="contact-headline">Contact</h3>
+    		<hr class="blue" />
+    		<p class="contact-info">
+    		Currently entertaining new opportunities. Please get in touch via Twitter:
+    		</p>
+
+    		<p>
+    		<a href="http://www.twitter.com/codingpup" class="contact-link">My Twitter</a>
+    		</p>
+    	</div>
+
+	</body>
+</html>
